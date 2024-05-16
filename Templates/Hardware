@@ -3,6 +3,14 @@ functions and inputs for the physical
 instrument and what they correspond
 to in "Code"
 
+--Power Switch--
+
+--Mono/Poly Switch--
+
+--Audio Out--
+
+--Sustain pedal--
+
 --Waveforms--
 -Sine Wave
 -Triangle Wave
@@ -31,4 +39,9 @@ to in "Code"
 --Key Buttons--
 -input button with assigned pitch
  organized with increasing integers
- 
+ assigned to chromatically increasing
+ pitch values
+
+components
+-potentiometer (P##)
+-momentary switch (M##)
