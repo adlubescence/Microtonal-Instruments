@@ -1,0 +1,34 @@
+"Hardware" contains a list of possible
+functions and inputs for the physical
+instrument and what they correspond
+to in "Code"
+
+--Waveforms--
+-Sine Wave
+-Triangle Wave
+-Sawtooth Wave
+-Pulse Wave
+-White Noise
+
+--Volume--
+-volume ouput values corresponding to
+ each Waveform, assigned to 
+ potentiometer
+
+--Pitch--
+-Hz value sent to Waveform assigned 
+ to key button
+
+--Envelope--
+-Attack
+-Decay
+
+--Filter--
+-Low Pass Filter Cutoff
+-High Pass Filter Cutoff
+-Resonance
+
+--Key Buttons--
+-input button with assigned pitch
+ organized with increasing integers
+ 
