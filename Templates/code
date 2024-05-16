@@ -8,3 +8,18 @@ all interchangeable, somewhat arbitrary
 EDO is my personal preference
 so lets go with that
 
+necessary objects
+-waveform
+-input
+-output
+
+necessary functions
+-generate specific pitch per input
+-send specific pitch to output
+
+waveform is saved as a single cycle,
+pitch is defined as a Hz value
+(cycle
+
+inputs are labelled with a number to
+be assigned to a specific Hz value
