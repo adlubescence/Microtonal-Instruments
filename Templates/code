@@ -23,3 +23,28 @@ pitch is defined as a Hz value
 
 inputs are labelled with a number to
 be assigned to a specific Hz value
+
+Volume Values
+
+(0 = no output; 100 = Max output)
+P01 - 0-100
+P02 - 0-100
+P03 - 0-100
+P04 - 0-100
+P05 - 0-100
+
+Envelope Values
+
+(0 = no envelope; 100 = max envelope)
+P06 - 0-100
+P07 - 0-100
+
+Filter Values
+
+P08 - 0-100
+P09 - 0-100
+p10 - 0-100
+
+Pitch Values
+
+K01 - 
