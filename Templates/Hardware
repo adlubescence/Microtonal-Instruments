@@ -65,4 +65,9 @@ component list
 -P09 - HPF Cutoff
 -P10 - Resonance
 -R01 - Power Switch
--S01 - 
+-S01 - Sine Wave Mute
+-S02 - Triangle Wave Mute
+-S03 - Sawtooth Wave Mute
+-S04 - Pulse Wave Mute
+-S05 - White Noise Mute
+-S06 - Mono/Poly Switch
