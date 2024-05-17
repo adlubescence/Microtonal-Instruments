@@ -43,7 +43,26 @@ to in "Code"
  pitch values
 
 components
--potentiometer (P##)
--momentary switch (M##)
--push button switch (B##)
 -1/4 inch jacks (J##)
+-mechanical key switch (K##)
+-potentiometer (P##)
+-rocker switch (R##)
+-slide switch (S##)
+
+component list
+-J01 - Audio Output
+-J02 - Sustain Pedal
+-K01 - 
+...
+-P01 - Sine Wave Volume
+-P02 - Triangle Wave Volume
+-P03 - Sawtooth Wave Volume
+-P04 - Pulse Wave Volume
+-P05 - White Noise Volume
+-P06 - Envelope Attack
+-P07 - Envelope Delay
+-P08 - LPF Cutoff
+-P09 - HPF Cutoff
+-P10 - Resonance
+-R01 - Power Switch
+-S01 - 
