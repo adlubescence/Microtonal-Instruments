@@ -40,7 +40,6 @@ listbox bounds (540, 75, 50, 20), channel("VCF"), text("LPF", "HPF")
 rslider    bounds(580, 45, 80, 80), valueTextBox(1), textBox(1), text("Cutoff"), channel("FilCut"),  range(0,  5, 0.05), $SLIDER_STYLE
 rslider    bounds(640, 45, 80, 80), valueTextBox(1), textBox(1), text("Res"), channel("FilRes"),  range(0,  5, 0.05), $SLIDER_STYLE
 
-
 ;Effect;
 groupbox text("Effect") bounds(720, 0, 190, 160), colour(8, 66, 142, 255) corners(0)
 listbox bounds (730, 75, 50, 20), channel("Effect"), text("Chr", "Del", "Rev")
@@ -51,53 +50,52 @@ rslider    bounds(830, 45, 80, 80), valueTextBox(1), textBox(1), text("Mod2"), c
 groupbox text("Output") bounds(910, 0, 90, 160), colour(8, 66, 142, 255) corners(0)
 rslider    bounds(915, 45, 80, 80), valueTextBox(1), textBox(1), text("Volume"), channel("Vol"),  range(0,  5, 0.05), $SLIDER_STYLE
 
-
 ;KEYBOARD;
 groupbox text("Keyboard") bounds(0, 160, 1000, 400), colour(8, 66, 142, 255) corners(0)
 ;Homerow;
-button bounds (50, 250, 50, 50), channel("but101"), text("C4") ;101;
-button bounds (100, 250, 50, 50), channel("but104"), text("D4") ;104;
-button bounds (150, 250, 50, 50), channel("but107"), text("E4") ;107;
-button bounds (200, 250, 50, 50), channel("but108"), text("F4") ;108;
-button bounds (250, 250, 50, 50), channel("but111"), text("G4") ;111;
-button bounds (300, 250, 50, 50), channel("but114"), text("A4") ;114;
-button bounds (350, 250, 50, 50), channel("but117"), text("B4") ;117;
-button bounds (400, 250, 50, 50), channel("but201"), text("C5") ;201;
-button bounds (450, 250, 50, 50), channel("but204"), text("D5") ;204;
-button bounds (500, 250, 50, 50), channel("but207"), text("E5") ;207;
-button bounds (550, 250, 50, 50), channel("but208"), text("F5") ;208;
-button bounds (600, 250, 50, 50), channel("but211"), text("G5") ;211;
-button bounds (650, 250, 50, 50), channel("but214"), text("A5") ;214;
-button bounds (700, 250, 50, 50), channel("but217"), text("B5") ;217;
-button bounds (750, 250, 50, 50), channel("but301"), text("C6") ;301;
-button bounds (800, 250, 50, 50), channel("but304"), text("D6") ;304;
-button bounds (850, 250, 50, 50), channel("but207"), text("E6") ;307;
+button bounds (50, 250, 50, 50), channel("but101"), text("C3") ;101;
+button bounds (100, 250, 50, 50), channel("but104"), text("D3") ;104;
+button bounds (150, 250, 50, 50), channel("but107"), text("E3") ;107;
+button bounds (200, 250, 50, 50), channel("but108"), text("F3") ;108;
+button bounds (250, 250, 50, 50), channel("but111"), text("G3") ;111;
+button bounds (300, 250, 50, 50), channel("but114"), text("A3") ;114;
+button bounds (350, 250, 50, 50), channel("but117"), text("B3") ;117;
+button bounds (400, 250, 50, 50), channel("but201"), text("C4") ;201;
+button bounds (450, 250, 50, 50), channel("but204"), text("D4") ;204;
+button bounds (500, 250, 50, 50), channel("but207"), text("E4") ;207;
+button bounds (550, 250, 50, 50), channel("but208"), text("F4") ;208;
+button bounds (600, 250, 50, 50), channel("but211"), text("G4") ;211;
+button bounds (650, 250, 50, 50), channel("but214"), text("A4") ;214;
+button bounds (700, 250, 50, 50), channel("but217"), text("B4") ;217;
+button bounds (750, 250, 50, 50), channel("but301"), text("C5") ;301;
+button bounds (800, 250, 50, 50), channel("but304"), text("D5") ;304;
+button bounds (850, 250, 50, 50), channel("but307"), text("E5") ;307;
 ;Sharps:
-button bounds (60, 200, 50, 50), channel("but102"), text("C#4") ;102;
-button bounds (110, 200, 50, 50), channel("but105"), text("D#4") ;105;
-button bounds (210, 200, 50, 50), channel("but109"), text("F#4") ;109;
-button bounds (260, 200, 50, 50), channel("but112"), text("G#4") ;112;
-button bounds (310, 200, 50, 50), channel("but115"), text("A#4") ;115;
-button bounds (410, 200, 50, 50), channel("but202"), text("C#5") ;202;
-button bounds (460, 200, 50, 50), channel("but205"), text("D#5") ;205;
-button bounds (560, 200, 50, 50), channel("but209"), text("F#5") ;209;
-button bounds (610, 200, 50, 50), channel("but212"), text("G#5") ;212;
-button bounds (660, 200, 50, 50), channel("but215"), text("A#5") ;215;
-button bounds (760, 200, 50, 50), channel("but302"), text("C#6") ;302;
-button bounds (810, 200, 50, 50), channel("but205"), text("D#6") ;305;
+button bounds (60, 200, 50, 50), channel("but102"), text("C#3") ;102;
+button bounds (110, 200, 50, 50), channel("but105"), text("D#3") ;105;
+button bounds (210, 200, 50, 50), channel("but109"), text("F#3") ;109;
+button bounds (260, 200, 50, 50), channel("but112"), text("G#3") ;112;
+button bounds (310, 200, 50, 50), channel("but115"), text("A#3") ;115;
+button bounds (410, 200, 50, 50), channel("but202"), text("C#4") ;202;
+button bounds (460, 200, 50, 50), channel("but205"), text("D#4") ;205;
+button bounds (560, 200, 50, 50), channel("but209"), text("F#4") ;209;
+button bounds (610, 200, 50, 50), channel("but212"), text("G#4") ;212;
+button bounds (660, 200, 50, 50), channel("but215"), text("A#4") ;215;
+button bounds (760, 200, 50, 50), channel("but302"), text("C#5") ;302;
+button bounds (810, 200, 50, 50), channel("but305"), text("D#5") ;305;
 ;Flats;
-button bounds (90, 300, 50, 50), channel("but103"), text("Db4") ;103;
-button bounds (140, 300, 50, 50), channel("but106"), text("Eb4") ;106;
-button bounds (240, 300, 50, 50), channel("but110"), text("Gb4") ;110;
-button bounds (290, 300, 50, 50), channel("but113"), text("Ab4") ;113;
-button bounds (340, 300, 50, 50), channel("but116"), text("Bb4") ;116;
-button bounds (440, 300, 50, 50), channel("but203"), text("Db5") ;203;
-button bounds (490, 300, 50, 50), channel("but206"), text("Eb5") ;206;
-button bounds (590, 300, 50, 50), channel("but210"), text("Gb5") ;210;
-button bounds (640, 300, 50, 50), channel("but213"), text("Ab5") ;213;
-button bounds (690, 300, 50, 50), channel("but216"), text("Bb5") ;216;
-button bounds (790, 300, 50, 50), channel("but303"), text("Db6") ;303;
-button bounds (840, 300, 50, 50), channel("but306"), text("Eb6") ;306;
+button bounds (90, 300, 50, 50), channel("but103"), text("Db3") ;103;
+button bounds (140, 300, 50, 50), channel("but106"), text("Eb3") ;106;
+button bounds (240, 300, 50, 50), channel("but110"), text("Gb3") ;110;
+button bounds (290, 300, 50, 50), channel("but113"), text("Ab3") ;113;
+button bounds (340, 300, 50, 50), channel("but116"), text("Bb3") ;116;
+button bounds (440, 300, 50, 50), channel("but203"), text("Db4") ;203;
+button bounds (490, 300, 50, 50), channel("but206"), text("Eb4") ;206;
+button bounds (590, 300, 50, 50), channel("but210"), text("Gb4") ;210;
+button bounds (640, 300, 50, 50), channel("but213"), text("Ab4") ;213;
+button bounds (690, 300, 50, 50), channel("but216"), text("Bb4") ;216;
+button bounds (790, 300, 50, 50), channel("but303"), text("Db5") ;303;
+button bounds (840, 300, 50, 50), channel("but306"), text("Eb5") ;306;
 
 </Cabbage>
 <CsoundSynthesizer>
@@ -277,118 +275,117 @@ endin
 
 ;Keys;
 
-instr 101 ;C4;
+instr 101 ;C3;
   aenv madsr .1, .15, .1, 0.1
-  ares vco aenv, 258.972, 2, 0.5
-  a2 oscili aenv, 258.972
+  ares vco aenv, 129.486, 2, 0.5
 outs ares, ares
 endin
 
-instr 102 ;C#4;
-  a1 expon 1, p3, 0.001
-  a2 oscili a1, 269.749
+instr 102 ;C#3;
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 134.874, 2, 0.5
+outs ares, ares
+endin
+
+instr 103 ;Db3;
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 140.487, 2, 0.5
+outs ares, ares
+endin
+
+instr 104 ;D3;
+a1 expon 1, p3, 0.001
+a2 oscili a1, 146.334
 outs a2, a2
 endin
 
-instr 103 ;Db4;
+instr 105 ;D#3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 280.975
+a2 oscili a1, 152.424
 outs a2, a2
 endin
 
-instr 104 ;D4;
+instr 106 ;Eb3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 292.668
+a2 oscili a1, 158.767
 outs a2, a2
 endin
 
-instr 105 ;D#4;
+instr 107 ;E3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 304.848
+a2 oscili a1, 165.374
 outs a2, a2
 endin
 
-instr 106 ;Eb4;
+instr 108 ;F3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 317.534
+a2 oscili a1, 172.256
 outs a2, a2
 endin
 
-instr 107 ;E4;
+instr 109 ;F#3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 330.749
+a2 oscili a1, 179.425
 outs a2, a2
 endin
 
-instr 108 ;F4;
+instr 110 ;Gb3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 344.513
+a2 oscili a1, 186.892
 outs a2, a2
 endin
 
-instr 109 ;F#4;
+instr 111 ;G3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 358.851
+a2 oscili a1, 194.670
 outs a2, a2
 endin
 
-instr 110 ;Gb4;
+instr 112 ;G#3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 373.785
+a2 oscili a1, 202.771
 outs a2, a2
 endin
 
-instr 111 ;G4;
+instr 113 ;Ab3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 389.340
+a2 oscili a1, 211.210
 outs a2, a2
 endin
 
-instr 112 ;G#4;
+instr 114 ;A3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 405.543
+a2 oscili a1, 220
 outs a2, a2
 endin
 
-instr 113 ;Ab4;
+instr 115 ;A#3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 422.420
+a2 oscili a1, 229.155
 outs a2, a2
 endin
 
-instr 114 ;A4;
+instr 116 ;Bb3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 440.000
+a2 oscili a1, 238.692
 outs a2, a2
 endin
 
-instr 115 ;A#4;
+instr 117 ;B3;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 458.311
+a2 oscili a1, 248.625
 outs a2, a2
 endin
 
-instr 116 ;Bb4;
+instr 201 ;C4;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 477.384
+a2 oscili a1, 258.972
 outs a2, a2
 endin
 
-instr 117 ;B4;
+instr 202 ;C#4;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 497.250
-outs a2, a2
-endin
-
-instr 201 ;C5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 517.944
-outs a2, a2
-endin
-
-instr 202 ;C#5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 539.499
+a2 oscili a1, 269.749
 outs a2, a2
 endin
 
@@ -400,7 +397,7 @@ endin
 
 instr 204 ;D4;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 292.668
+a2 oscili a1, 292.688
 outs a2, a2
 endin
 
@@ -495,31 +492,31 @@ endin
 
 instr 303 ;Db4;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 280.975
+a2 oscili a1, 561.951
 outs a2, a2
 endin
 
-instr 304 ;D4;
+instr 304 ;D5;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 292.668
+a2 oscili a1, 585.337
 outs a2, a2
 endin
 
-instr 305 ;D#4;
+instr 305 ;D#5;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 304.848
+a2 oscili a1, 609.696
 outs a2, a2
 endin
 
-instr 306 ;Eb4;
+instr 306 ;Eb5;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 317.534
+a2 oscili a1, 635.069
 outs a2, a2
 endin
 
-instr 307 ;E4;
+instr 307 ;E5;
 a1 expon 1, p3, 0.001
-a2 oscili a1, 330.749
+a2 oscili a1, 661.498
 outs a2, a2
 endin
 
