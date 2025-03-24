@@ -8,94 +8,94 @@ form caption("17EDO") size(1000, 380), guiMode("queue"), pluginId("def1")
 ;;
 ;;kstatus, kchan, kdata1, kdata2                  midiin
 
-
 ;OSC 1;
-groupbox text("OSC 1") bounds(0, 0, 100, 80), colour(8, 66, 142, 255), corners(0)
-checkbox bounds(10, 40, 20, 20), channel("Osc1"), corners(0)
-combobox channel("combobox1"), range(1, 4, 1, 1, 1), bounds(40, 40, 50, 20), text("saw", "sqr", "tri")
+groupbox bounds(000, 000, 100, 080), text("OSC 1"), colour(10,38,10), corners(0)
+checkbox bounds(010, 040, 020, 020), channel("Osc1"), corners(0)
+combobox bounds(040, 040, 050, 020), channel("Wav1"), text("saw", "sqr", "tri"), range(1, 4, 1, 1, 1)
+
 ;OSC 2;
-groupbox text("OSC 2") bounds(0, 80, 100, 80), colour(8, 66, 142, 255) corners(0)
-checkbox bounds(10, 120, 20, 20), channel("Osc2"), corners(0)
-combobox channel("combobox2"), range(1, 4, 1, 1, 1), bounds(40, 120, 50, 20), text("saw", "sqr", "tri")
+groupbox bounds(000, 080, 100, 080), text("OSC 2"), colour(10,38,10), corners(0)
+checkbox bounds(010, 120, 020, 020), channel("Osc2"), corners(0)
+combobox bounds(040, 120, 050, 020), channel("Wav2"), text("saw", "sqr", "tri"), range(1, 4, 1, 1, 1)
 
 ;LFO;
-groupbox text("LFO") bounds(100, 0, 170, 160), colour(8, 66, 142, 255) corners(0)
-checkbox bounds(110, 40, 20, 20), channel("Pitch"), corners(0)
-label bounds(100, 60, 40, 20), fontSize(12), text("Pitch")
-label bounds(100, 100, 40, 20), fontSize(12), text("VCA")
-checkbox bounds(110, 120, 20, 20), channel("VCA"), corners(0)
-rslider    bounds(130, 45, 80, 80), valueTextBox(1), textBox(1), text("Depth"), channel("LFODep"),  range(0,  5, 0.05), $SLIDER_STYLE
-rslider    bounds(190, 45, 80, 80), valueTextBox(1), textBox(1), text("Rate"), channel("LFORte"),  range(0,  5, 0.05), $SLIDER_STYLE
+groupbox bounds(100, 000, 170, 160), text("LFO"), colour(10,38,10), corners(0)
+checkbox bounds(110, 040, 020, 020), channel("Pitch"), corners(0)
+label    bounds(100, 060, 040, 020), fontSize(12), text("Pitch")
+label    bounds(100, 100, 040, 020), fontSize(12), text("VCA")
+checkbox bounds(110, 120, 020, 020), channel("VCA"), corners(0)
+rslider  bounds(130, 045, 080, 080), channel("LFODep"), valueTextBox(1), textBox(1), text("Depth"),  range(0,  5, 0.05)
+rslider  bounds(190, 045, 080, 080), channel("LFORte"), valueTextBox(1), textBox(1), text("Rate"),  range(0,  5, 0.05)
 
 ;ADSR;
-groupbox text("ADSR") bounds(270, 0, 260, 160), colour(8, 66, 142, 255) corners(0)
-rslider    bounds(270, 45, 80, 80), valueTextBox(1), textBox(1), text("Atk"), channel("AAtk"),  range(0,  5, 0.05), $SLIDER_STYLE
-rslider    bounds(330, 45, 80, 80), valueTextBox(1), textBox(1), text("Dec"), channel("ADec"),  range(0,  5, 0.5), $SLIDER_STYLE
-rslider    bounds(390, 45, 80, 80), valueTextBox(1), textBox(1), text("Sus"), channel("ASus"),  range(0,  1, 1), $SLIDER_STYLE
-rslider    bounds(450, 45, 80, 80), valueTextBox(1), textBox(1), text("Rel"), channel("ARel"),  range(0,  5, 0.2), $SLIDER_STYLEs
+groupbox bounds(270, 000, 260, 160), text("ADSR"), colour(10,38,10), corners(0)
+rslider  bounds(270, 045, 080, 080), valueTextBox(1), textBox(1), text("Atk"), channel("AAtk"),  range(0,  5, 0.05)
+rslider  bounds(330, 045, 080, 080), valueTextBox(1), textBox(1), text("Dec"), channel("ADec"),  range(0,  5, 0.5)
+rslider  bounds(390, 045, 080, 080), valueTextBox(1), textBox(1), text("Sus"), channel("ASus"),  range(0,  1, 1)
+rslider  bounds(450, 045, 080, 080), valueTextBox(1), textBox(1), text("Rel"), channel("ARel"),  range(0,  5, 0.2)
 
 ;Filter;
-groupbox text("Filter") bounds(530, 0, 190, 160), colour(8, 66, 142, 255) corners(0)
-listbox bounds (540, 75, 50, 20), channel("VCF"), text("LPF", "HPF")
-rslider    bounds(580, 45, 80, 80), valueTextBox(1), textBox(1), text("Cutoff"), channel("FilCut"),  range(0,  5, 0.05), $SLIDER_STYLE
-rslider    bounds(640, 45, 80, 80), valueTextBox(1), textBox(1), text("Res"), channel("FilRes"),  range(0,  5, 0.05), $SLIDER_STYLE
+groupbox bounds(530, 000, 190, 160), text("Filter"), colour(10,38,10), corners(0)
+combobox bounds(540, 075, 050, 020), channel("VCF"), text("LPF", "HPF"), range(1, 2, 1, 1, 1)
+rslider  bounds(580, 045, 080, 080), valueTextBox(1), textBox(1), text("Cutoff"), channel("FilCut"),  range(0,  5, 0.05)
+rslider  bounds(640, 045, 080, 080), valueTextBox(1), textBox(1), text("Res"), channel("FilRes"),  range(0,  5, 0.05)
 
 ;Effect;
-groupbox text("Effect") bounds(720, 0, 190, 160), colour(8, 66, 142, 255) corners(0)
-listbox bounds (730, 75, 50, 20), channel("Effect"), text("Chr", "Del", "Rev")
-rslider    bounds(770, 45, 80, 80), valueTextBox(1), textBox(1), text("Mod1"), channel("Mod1"),  range(0,  5, 0.05), $SLIDER_STYLE
-rslider    bounds(830, 45, 80, 80), valueTextBox(1), textBox(1), text("Mod2"), channel("Mod2"),  range(0,  5, 0.05), $SLIDER_STYL
+groupbox bounds(720, 000, 190, 160), text("Effect"), colour(10,38,10), corners(0)
+combobox bounds(730, 075, 050, 020), channel("Effect"), text("Chr", "Del", "Rev"), range(1, 4, 1, 1, 1)
+rslider  bounds(770, 045, 080, 080), valueTextBox(1), textBox(1), text("Mod1"), channel("Mod1"),  range(0,  5, 0.05)
+rslider  bounds(830, 045, 080, 080), valueTextBox(1), textBox(1), text("Mod2"), channel("Mod2"),  range(0,  5, 0.05)
 
 ;Output;
-groupbox text("Output") bounds(910, 0, 90, 160), colour(8, 66, 142, 255) corners(0)
-rslider    bounds(915, 45, 80, 80), valueTextBox(1), textBox(1), text("Volume"), channel("Vol"),  range(0,  5, 0.05), $SLIDER_STYLE
+groupbox bounds(910, 000, 090, 160), text("Output"), colour(10,38,10), corners(0)
+rslider  bounds(915, 045, 080, 080), valueTextBox(1), textBox(1), text("Volume"), channel("Vol"),  range(0,  5, 0.05)
 
 ;KEYBOARD;
-groupbox text("Keyboard") bounds(0, 160, 1000, 400), colour(8, 66, 142, 255) corners(0)
+groupbox bounds(000, 160, 1000, 400), text("Keyboard")  colour(10,38,10), corners(0)
 ;Homerow;
-button bounds (50, 250, 50, 50), channel("but101"), text("C3") ;101;
-button bounds (100, 250, 50, 50), channel("but104"), text("D3") ;104;
-button bounds (150, 250, 50, 50), channel("but107"), text("E3") ;107;
-button bounds (200, 250, 50, 50), channel("but108"), text("F3") ;108;
-button bounds (250, 250, 50, 50), channel("but111"), text("G3") ;111;
-button bounds (300, 250, 50, 50), channel("but114"), text("A3") ;114;
-button bounds (350, 250, 50, 50), channel("but117"), text("B3") ;117;
-button bounds (400, 250, 50, 50), channel("but201"), text("C4") ;201;
-button bounds (450, 250, 50, 50), channel("but204"), text("D4") ;204;
-button bounds (500, 250, 50, 50), channel("but207"), text("E4") ;207;
-button bounds (550, 250, 50, 50), channel("but208"), text("F4") ;208;
-button bounds (600, 250, 50, 50), channel("but211"), text("G4") ;211;
-button bounds (650, 250, 50, 50), channel("but214"), text("A4") ;214;
-button bounds (700, 250, 50, 50), channel("but217"), text("B4") ;217;
-button bounds (750, 250, 50, 50), channel("but301"), text("C5") ;301;
-button bounds (800, 250, 50, 50), channel("but304"), text("D5") ;304;
-button bounds (850, 250, 50, 50), channel("but307"), text("E5") ;307;
+button   bounds (050, 250, 050, 050), channel("but101"), latched(0), text("C3"), colour:0(128,128,128) ;101;
+button   bounds (100, 250, 050, 050), channel("but104"), latched(0), text("D3"), colour:0(128,128,128) ;104;
+button   bounds (150, 250, 050, 050), channel("but107"), latched(0), text("E3"), colour:0(128,128,128) ;107;
+button   bounds (200, 250, 050, 050), channel("but108"), latched(0), text("F3"), colour:0(128,128,128) ;108;
+button   bounds (250, 250, 050, 050), channel("but111"), latched(0), text("G3"), colour:0(128,128,128) ;111;
+button   bounds (300, 250, 050, 050), channel("but114"), latched(0), text("A3"), colour:0(128,128,128) ;114;
+button   bounds (350, 250, 050, 050), channel("but117"), latched(0), text("B3"), colour:0(128,128,128) ;117;
+button   bounds (400, 250, 050, 050), channel("but201"), latched(0), text("C4"), colour:0(128,128,128) ;201;
+button   bounds (450, 250, 050, 050), channel("but204"), latched(0), text("D4"), colour:0(128,128,128) ;204;
+button   bounds (500, 250, 050, 050), channel("but207"), latched(0), text("E4"), colour:0(128,128,128) ;207;
+button   bounds (550, 250, 050, 050), channel("but208"), latched(0), text("F4"), colour:0(128,128,128) ;208;
+button   bounds (600, 250, 050, 050), channel("but211"), latched(0), text("G4"), colour:0(128,128,128) ;211;
+button   bounds (650, 250, 050, 050), channel("but214"), latched(0), text("A4"), colour:0(128,128,128) ;214;
+button   bounds (700, 250, 050, 050), channel("but217"), latched(0), text("B4"), colour:0(128,128,128) ;217;
+button   bounds (750, 250, 050, 050), channel("but301"), latched(0), text("C5"), colour:0(128,128,128) ;301;
+button   bounds (800, 250, 050, 050), channel("but304"), latched(0), text("D5"), colour:0(128,128,128) ;304;
+button   bounds (850, 250, 050, 050), channel("but307"), latched(0), text("E5"), colour:0(128,128,128) ;307;
 ;Sharps:
-button bounds (60, 200, 50, 50), channel("but102"), text("C#3") ;102;
-button bounds (110, 200, 50, 50), channel("but105"), text("D#3") ;105;
-button bounds (210, 200, 50, 50), channel("but109"), text("F#3") ;109;
-button bounds (260, 200, 50, 50), channel("but112"), text("G#3") ;112;
-button bounds (310, 200, 50, 50), channel("but115"), text("A#3") ;115;
-button bounds (410, 200, 50, 50), channel("but202"), text("C#4") ;202;
-button bounds (460, 200, 50, 50), channel("but205"), text("D#4") ;205;
-button bounds (560, 200, 50, 50), channel("but209"), text("F#4") ;209;
-button bounds (610, 200, 50, 50), channel("but212"), text("G#4") ;212;
-button bounds (660, 200, 50, 50), channel("but215"), text("A#4") ;215;
-button bounds (760, 200, 50, 50), channel("but302"), text("C#5") ;302;
-button bounds (810, 200, 50, 50), channel("but305"), text("D#5") ;305;
+button   bounds (060, 200, 050, 050), channel("but102"), latched(0), text("C#3"), colour:0(0,0,0) ;102;
+button   bounds (110, 200, 050, 050), channel("but105"), latched(0), text("D#3"), colour:0(0,0,0) ;105;
+button   bounds (210, 200, 050, 050), channel("but109"), latched(0), text("F#3"), colour:0(0,0,0) ;109;
+button   bounds (260, 200, 050, 050), channel("but112"), latched(0), text("G#3"), colour:0(0,0,0) ;112;
+button   bounds (310, 200, 050, 050), channel("but115"), latched(0), text("A#3"), colour:0(0,0,0) ;115;
+button   bounds (410, 200, 050, 050), channel("but202"), latched(0), text("C#4"), colour:0(0,0,0) ;202;
+button   bounds (460, 200, 050, 050), channel("but205"), latched(0), text("D#4"), colour:0(0,0,0) ;205;
+button   bounds (560, 200, 050, 050), channel("but209"), latched(0), text("F#4"), colour:0(0,0,0) ;209;
+button   bounds (610, 200, 050, 050), channel("but212"), latched(0), text("G#4"), colour:0(0,0,0) ;212;
+button   bounds (660, 200, 050, 050), channel("but215"), latched(0), text("A#4"), colour:0(0,0,0) ;215;
+button   bounds (760, 200, 050, 050), channel("but302"), latched(0), text("C#5"), colour:0(0,0,0) ;302;
+button   bounds (810, 200, 050, 050), channel("but305"), latched(0), text("D#5"), colour:0(0,0,0) ;305;
 ;Flats;
-button bounds (90, 300, 50, 50), channel("but103"), text("Db3") ;103;
-button bounds (140, 300, 50, 50), channel("but106"), text("Eb3") ;106;
-button bounds (240, 300, 50, 50), channel("but110"), text("Gb3") ;110;
-button bounds (290, 300, 50, 50), channel("but113"), text("Ab3") ;113;
-button bounds (340, 300, 50, 50), channel("but116"), text("Bb3") ;116;
-button bounds (440, 300, 50, 50), channel("but203"), text("Db4") ;203;
-button bounds (490, 300, 50, 50), channel("but206"), text("Eb4") ;206;
-button bounds (590, 300, 50, 50), channel("but210"), text("Gb4") ;210;
-button bounds (640, 300, 50, 50), channel("but213"), text("Ab4") ;213;
-button bounds (690, 300, 50, 50), channel("but216"), text("Bb4") ;216;
-button bounds (790, 300, 50, 50), channel("but303"), text("Db5") ;303;
-button bounds (840, 300, 50, 50), channel("but306"), text("Eb5") ;306;
+button   bounds (090, 300, 050, 050), channel("but103"), latched(0), text("Db3"), colour:0(255,255,255), fontColour:0(0,0,0) ;103;
+button   bounds (140, 300, 050, 050), channel("but106"), latched(0), text("Eb3"), colour:0(255,255,255), fontColour:0(0,0,0) ;106;
+button   bounds (240, 300, 050, 050), channel("but110"), latched(0), text("Gb3"), colour:0(255,255,255), fontColour:0(0,0,0) ;110;
+button   bounds (290, 300, 050, 050), channel("but113"), latched(0), text("Ab3"), colour:0(255,255,255), fontColour:0(0,0,0) ;113;
+button   bounds (340, 300, 050, 050), channel("but116"), latched(0), text("Bb3"), colour:0(255,255,255), fontColour:0(0,0,0) ;116;
+button   bounds (440, 300, 050, 050), channel("but203"), latched(0), text("Db4"), colour:0(255,255,255), fontColour:0(0,0,0) ;203;
+button   bounds (490, 300, 050, 050), channel("but206"), latched(0), text("Eb4"), colour:0(255,255,255), fontColour:0(0,0,0) ;206;
+button   bounds (590, 300, 050, 050), channel("but210"), latched(0), text("Gb4"), colour:0(255,255,255), fontColour:0(0,0,0) ;210;
+button   bounds (640, 300, 050, 050), channel("but213"), latched(0), text("Ab4"), colour:0(255,255,255), fontColour:0(0,0,0) ;213;
+button   bounds (690, 300, 050, 050), channel("but216"), latched(0), text("Bb4"), colour:0(255,255,255), fontColour:0(0,0,0) ;216;
+button   bounds (790, 300, 050, 050), channel("but303"), latched(0), text("Db5"), colour:0(255,255,255), fontColour:0(0,0,0) ;303;
+button   bounds (840, 300, 050, 050), channel("but306"), latched(0), text("Eb5"), colour:0(255,255,255), fontColour:0(0,0,0) ;306;
 
 </Cabbage>
 <CsoundSynthesizer>
@@ -294,230 +294,231 @@ outs ares, ares
 endin
 
 instr 104 ;D3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 146.334
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 146.334, 2, 0.5
+outs ares, ares
 endin
 
 instr 105 ;D#3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 152.424
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 152.424, 2, 0.5
+outs ares, ares
 endin
 
 instr 106 ;Eb3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 158.767
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 158.767, 2, 0.5
+outs ares, ares
 endin
 
 instr 107 ;E3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 165.374
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 165.374, 2, 0.5
+outs ares, ares
 endin
 
 instr 108 ;F3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 172.256
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 172.256, 2, 0.5
+outs ares, ares
 endin
 
 instr 109 ;F#3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 179.425
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 179.425, 2, 0.5
+outs ares, ares
 endin
 
 instr 110 ;Gb3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 186.892
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 186.892, 2, 0.5
+outs ares, ares
 endin
 
 instr 111 ;G3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 194.670
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 194.670, 2, 0.5
+outs ares, ares
 endin
 
 instr 112 ;G#3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 202.771
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 202.771, 2, 0.5
+outs ares, ares
 endin
 
 instr 113 ;Ab3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 211.210
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 211.210, 2, 0.5
+outs ares, ares
 endin
 
 instr 114 ;A3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 220
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 220, 2, 0.5
+outs ares, ares
 endin
 
 instr 115 ;A#3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 229.155
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 229.155, 2, 0.5
+outs ares, ares
 endin
 
 instr 116 ;Bb3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 238.692
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 238.692, 2, 0.5
+outs ares, ares
 endin
 
 instr 117 ;B3;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 248.625
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 248.625, 2, 0.5
+outs ares, ares
 endin
 
 instr 201 ;C4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 258.972
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 258.972, 2, 0.5
+outs ares, ares
 endin
 
 instr 202 ;C#4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 269.749
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 269.749, 2, 0.5
+outs ares, ares
 endin
 
 instr 203 ;Db4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 280.975
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 280.975, 2, 0.5
+outs ares, ares
 endin
 
 instr 204 ;D4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 292.688
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 292.688, 2, 0.5
+outs ares, ares
 endin
 
 instr 205 ;D#4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 304.848
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 304.848, 2, 0.5
+outs ares, ares
 endin
 
 instr 206 ;Eb4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 317.534
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 317.534, 2, 0.5
+outs ares, ares
 endin
 
 instr 207 ;E4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 330.749
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 330.749, 2, 0.5
+outs ares, ares
 endin
 
 instr 208 ;F4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 344.513
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 344.513, 2, 0.5
+outs ares, ares
 endin
 
 instr 209 ;F#4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 358.851
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 358.851, 2, 0.5
+outs ares, ares
 endin
 
 instr 210 ;Gb4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 373.785
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 373.785, 2, 0.5
+outs ares, ares
 endin
 
 instr 211 ;G4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 389.340
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 389.340, 2, 0.5
+outs ares, ares
 endin
 
 instr 212 ;G#4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 405.543
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 405.543, 2, 0.5
+outs ares, ares
 endin
 
 instr 213 ;Ab4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 422.420
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 422.420, 2, 0.5
+outs ares, ares
 endin
 
 instr 214 ;A4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 440.000
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 440.000, 2, 0.5
+outs ares, ares
 endin
 
 instr 215 ;A#4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 458.311
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 458.311, 2, 0.5
+outs ares, ares
 endin
 
 instr 216 ;Bb4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 477.384
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 477.384, 2, 0.5
+outs ares, ares
 endin
 
 instr 217 ;B4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 497.250
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 497.250, 2, 0.5
+outs ares, ares
 endin
+
 instr 301 ;C5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 517.944
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 517.944, 2, 0.5
+outs ares, ares
 endin
 
 instr 302 ;C#5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 539.499
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 539.499, 2, 0.5
+outs ares, ares
 endin
 
 instr 303 ;Db4;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 561.951
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 561.951, 2, 0.5
+outs ares, ares
 endin
 
 instr 304 ;D5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 585.337
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 585.337, 2, 0.5
+outs ares, ares
 endin
 
 instr 305 ;D#5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 609.696
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 609.696, 2, 0.5
+outs ares, ares
 endin
 
 instr 306 ;Eb5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 635.069
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 635.069, 2, 0.5
+outs ares, ares
 endin
 
 instr 307 ;E5;
-a1 expon 1, p3, 0.001
-a2 oscili a1, 661.498
-outs a2, a2
+  aenv madsr .1, .15, .1, 0.1
+  ares vco aenv, 661.498, 2, 0.5
+outs ares, ares
 endin
 
 
@@ -527,3 +528,9 @@ f1 0 1024 10 1
 i1 0 100
 </CsScore>
 </CsoundSynthesizer>
+
+; John Heinze 2025
+;
+; License: CC0 1.0 Universal
+; You can copy, modify, and distribute this file, 
+; even for commercial purposes, all without asking permission. 
