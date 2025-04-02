@@ -117,6 +117,7 @@ instr 001
         event "i", 101, 0, .5, iBaseFreq 
     endif
     
+    cabbageSet kTrig, chnget, Snames
     kBut chnget "but102"
     if changed:k(kBut)==1 then
         kFreq = iBaseFreq * pow(2, kIndex/17)
