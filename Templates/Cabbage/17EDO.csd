@@ -5,7 +5,7 @@ form caption("17EDO") size(1000, 380), guiMode("queue"), pluginId("def1")
 ;KEYBOARD;
 
 
-button   bounds (050, 250, 050, 050), channel("but101"), latched(0), text("C3"), colour:0(128,128,128), _note("101"), _key("on")
+
 button   bounds (060, 200, 050, 050), channel("but102"), latched(0), text("C#3"), colour:0(0,0,0), _note("102"), _key("on")
 button   bounds (090, 300, 050, 050), channel("but103"), latched(0), text("Db3"), colour:0(255,255,255), fontColour:0(0,0,0), _note("103"), _key("on")
 button   bounds (100, 250, 050, 050), channel("but104"), latched(0), text("D3"), colour:0(128,128,128), _note("104"), _key("on")
@@ -46,6 +46,7 @@ button   bounds (800, 250, 050, 050), channel("but304"), latched(0), text("D5"),
 button   bounds (810, 200, 050, 050), channel("but305"), latched(0), text("D#5"), colour:0(0,0,0), _note("305"), _key("on")
 button   bounds (840, 300, 050, 050), channel("but306"), latched(0), text("Eb5"), colour:0(255,255,255), fontColour:0(0,0,0), _note("306"), _key("on")
 button   bounds (850, 250, 050, 050), channel("but307"), latched(0), text("E5"), colour:0(128,128,128), _note("307"), _key("on")
+button   bounds (050, 250, 050, 050), channel("but101"), latched(0), text("C3"), colour:0(128,128,128), _note("101"), _key("on")
 
 
 ;;MIDI midiin  instr   130
@@ -114,7 +115,8 @@ instr 001
     
     kBut chnget "but101"
     if changed:k(kBut)==1 then
-        event "i", 101, 0, .5, iBaseFreq 
+        kFreq = iBaseFreq * pow(2, 0/17)
+        event "i", 101, 0, .5, kFreq 
     endif
     
     kBut chnget "but102"
