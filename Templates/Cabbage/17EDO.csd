@@ -168,13 +168,13 @@ instr 001
     kBut chnget "but110"
     if changed:k(kBut)==1 then
         kFreq = iBaseFreq * pow(2, kIndex/17)
-        event "i", 101, 0, .5, iBaseFreq 
+        event "i", 101, 0, .5, kFreq
     endif
     
     kBut chnget "but111"
     if changed:k(kBut)==1 then
         kFreq = iBaseFreq * pow(2, kIndex/17)
-        event "i", 101, 0, .5, iBaseFreq 
+        event "i", 101, 0, .5, kFreq
     endif
     
     kBut chnget "but112"
@@ -213,13 +213,13 @@ instr 001
         event "i", 101, 0, .5, kFreq
     endif
     
-    kBut chnget "but118"
+    kBut chnget "but201"
     if changed:k(kBut)==1 then
         kFreq = iBaseFreq * pow(2, kIndex/17)
         event "i", 101, 0, .5, kFreq
     endif
     
-    kBut chnget "but119"
+    kBut chnget "but202"
     if changed:k(kBut)==1 then
         kFreq = iBaseFreq * pow(2, kIndex/17)
         event "i", 101, 0, .5, kFreq
