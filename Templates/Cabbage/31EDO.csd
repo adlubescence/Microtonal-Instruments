@@ -138,7 +138,7 @@ nchnls = 2
 instr 001
     SWidgetChannels[] cabbageGetWidgetChannels
     kIndex, kTrig cabbageChanged SWidgetChannels
-    iBaseFreq = 129.486
+    iBaseFreq = 131.546
     SNames[] cabbageGetWidgetChannels "automatable(1), _key(\"on\")"
     
     kBut chnget "but101"
